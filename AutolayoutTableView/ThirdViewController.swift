@@ -13,7 +13,7 @@ enum CellType: Int {
 }
 class ThirdViewController: BaseTableViewController {
     //内容存储区
-    let dataDict: Dictionary<CellType, Any?> = [CellType.Image: nil, CellType.Name: "", CellType.Price: "", CellType.Desc: ""]
+    var dataDict: Dictionary<CellType, Any?> = [CellType.Image: nil, CellType.Name: "", CellType.Price: "", CellType.Desc: ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +66,16 @@ class ThirdViewController: BaseTableViewController {
         }
     }
     
+    //设置cell内容
+    func fillCellDataByType(type: CellType, data: Any?) {
+        switch type {
+        case .Name, .Price, .Desc:
+            dataDict[type] = data
+        default:
+            dataDict[type] = data
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -93,6 +103,13 @@ class ThirdViewController: BaseTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! BaseCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.fillData(data)
+        
+        if type == CellType.Name {
+            let textCell: MenuAddTextCell = cell as! MenuAddTextCell
+            textCell.textChangedBlock = {(text: String) -> Void in
+                self.fillCellDataByType(type: type, data: text)
+            }
+        }
         return cell
     }
     

@@ -11,10 +11,14 @@ import UIKit
 let TitleText = "nameText"
 let ContentText = "contentText"
 
-class MenuAddTextCell: BaseCell {
+typealias TextChangedBlock = (_ text: String) -> Void
+
+class MenuAddTextCell: BaseCell, UITextFieldDelegate {
     
     @IBOutlet weak var contentTF: UITextField!
     @IBOutlet weak var titleTF: UILabel!
+    
+    var textChangedBlock: ((_ text: String) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,4 +37,18 @@ class MenuAddTextCell: BaseCell {
             self.titleTF.text = newData[TitleText]
         }
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        if let block = textChangedBlock {
+            block(textField.text!)
+        }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let block = textChangedBlock {
+            block(textField.text! + string)
+        }
+        return true
+    }
+    
 }
