@@ -59,11 +59,11 @@
             </objects>
             <point key="canvasLocation" x="1662" y="-591"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--First-->
         <scene sceneID="ln8-FO-7MZ">
             <objects>
                 <navigationController id="tu6-PO-HH7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="HwV-1m-Gct"/>
+                    <tabBarItem key="tabBarItem" title="First" id="HwV-1m-Gct"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TFY-b4-EDI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -105,11 +105,11 @@
             </objects>
             <point key="canvasLocation" x="1663" y="67"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Second-->
         <scene sceneID="EXF-yP-mWC">
             <objects>
                 <navigationController id="NTW-1i-v9K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="WDf-OZ-dKQ"/>
+                    <tabBarItem key="tabBarItem" title="Second" id="WDf-OZ-dKQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gsn-MB-FuF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -126,7 +126,7 @@
         <scene sceneID="yNa-dw-GGE">
             <objects>
                 <tableViewController id="yqC-9G-Uzl" customClass="ThirdViewController" customModule="AutolayoutTableView" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sUu-5q-DKc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sUu-5q-DKc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -135,7 +135,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2SB-9e-gBP" id="kp6-ON-91T">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -180,11 +180,11 @@
             </objects>
             <point key="canvasLocation" x="1673" y="1408"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Fourth-->
         <scene sceneID="fum-KF-7Iy">
             <objects>
                 <navigationController id="TdM-Ba-e97" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="0ze-8c-102"/>
+                    <tabBarItem key="tabBarItem" title="Fourth" id="0ze-8c-102"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NG6-XA-07C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -197,11 +197,11 @@
             </objects>
             <point key="canvasLocation" x="721" y="1408"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Third-->
         <scene sceneID="WSM-ZQ-Zxy">
             <objects>
                 <navigationController id="euy-RV-UmG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="LE2-Az-rap"/>
+                    <tabBarItem key="tabBarItem" title="Third" id="LE2-Az-rap"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WnX-DO-4cX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

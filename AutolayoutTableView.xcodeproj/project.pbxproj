@@ -34,6 +34,8 @@
 		18BE071C1E345B17001316A5 /* MenuAddImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BE07181E345B17001316A5 /* MenuAddImageCell.xib */; };
 		18BE071D1E345B17001316A5 /* MenuAddTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE07191E345B17001316A5 /* MenuAddTextCell.swift */; };
 		18BE071E1E345B17001316A5 /* MenuAddTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BE071A1E345B17001316A5 /* MenuAddTextCell.xib */; };
+		18BE07231E34948E001316A5 /* MenuAddContextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE07211E34948E001316A5 /* MenuAddContextCell.swift */; };
+		18BE07241E34948E001316A5 /* MenuAddContextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BE07221E34948E001316A5 /* MenuAddContextCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		18BE07181E345B17001316A5 /* MenuAddImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuAddImageCell.xib; sourceTree = "<group>"; };
 		18BE07191E345B17001316A5 /* MenuAddTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuAddTextCell.swift; sourceTree = "<group>"; };
 		18BE071A1E345B17001316A5 /* MenuAddTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuAddTextCell.xib; sourceTree = "<group>"; };
+		18BE07211E34948E001316A5 /* MenuAddContextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuAddContextCell.swift; sourceTree = "<group>"; };
+		18BE07221E34948E001316A5 /* MenuAddContextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuAddContextCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				188D30D51E31B127006F37F6 /* SecondViewController.swift */,
-				18BE07201E346156001316A5 /* View */,
 			);
 			name = Second;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				188D30E61E31B263006F37F6 /* ThirdViewController.swift */,
+				18BE07201E346156001316A5 /* View */,
 			);
 			name = Third;
 			sourceTree = "<group>";
@@ -184,6 +188,8 @@
 				18BE07181E345B17001316A5 /* MenuAddImageCell.xib */,
 				18BE07191E345B17001316A5 /* MenuAddTextCell.swift */,
 				18BE071A1E345B17001316A5 /* MenuAddTextCell.xib */,
+				18BE07211E34948E001316A5 /* MenuAddContextCell.swift */,
+				18BE07221E34948E001316A5 /* MenuAddContextCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 				18BE071E1E345B17001316A5 /* MenuAddTextCell.xib in Resources */,
 				18BE07111E3454B8001316A5 /* 7.jpg in Resources */,
 				188D30FA1E31B5D8006F37F6 /* 1.jpg in Resources */,
+				18BE07241E34948E001316A5 /* MenuAddContextCell.xib in Resources */,
 				188D30FD1E31B5D8006F37F6 /* 3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +290,7 @@
 				18BE071D1E345B17001316A5 /* MenuAddTextCell.swift in Sources */,
 				188D30ED1E31B2A4006F37F6 /* FirstCell.swift in Sources */,
 				188D30E71E31B263006F37F6 /* ThirdViewController.swift in Sources */,
+				18BE07231E34948E001316A5 /* MenuAddContextCell.swift in Sources */,
 				188D30D41E31B127006F37F6 /* FirstViewController.swift in Sources */,
 				18BE071B1E345B17001316A5 /* MenuAddImageCell.swift in Sources */,
 			);
