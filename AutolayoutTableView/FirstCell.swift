@@ -13,7 +13,7 @@ let TitleStr = "titleStr"
 let ContentStr = "contentStr"
 let timeStr = "timeStr"
 
-class FirstCell: UITableViewCell {
+class FirstCell: BaseCell {
 
     @IBOutlet weak var iv: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
@@ -32,22 +32,23 @@ class FirstCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    func fillData(_ data: Dictionary<String, String>?) {
-        if let aData = data {
-            if let aImage = aData[ImageStr] {
-                iv.image = UIImage.init(named: aImage)
-            }
-            if let aTitle = aData[TitleStr] {
-                titleLbl.text = aTitle
-            }
-            if let aContent = aData[ContentStr] {
-                contentLbl.text = aContent
-            }
-            if let aTime = aData[timeStr] {
-                timeLbl.text = aTime
+
+    override func fillData(_ data: Any?) {
+        
+            if let aData = data as? Dictionary<String, String> {
+                if let aImage = aData[ImageStr] {
+                    iv.image = UIImage.init(named: aImage)
+                }
+                if let aTitle = aData[TitleStr] {
+                    titleLbl.text = aTitle
+                }
+                if let aContent = aData[ContentStr] {
+                    contentLbl.text = aContent
+                }
+                if let aTime = aData[timeStr] {
+                    timeLbl.text = aTime
+                }
             }
         }
-    }
     
 }

@@ -8,19 +8,20 @@
 
 import UIKit
 
-class FirstViewController: UITableViewController {
+class FirstViewController: BaseTableViewController {
     let _cellId = "FirstCell"
-    var _datArray: Array<Dictionary<String, String>>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //设置tableview预估高度、必须设置，否则高度无法自动估算
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 44.0
-        //注册cell
-        self.tableView.register(UINib.init(nibName: _cellId, bundle: Bundle.main), forCellReuseIdentifier: _cellId)
+    }
+    
+    override func setUpData() {
+        super.setUpData()
         //数据源
-        _datArray = []
+        //文字读取
+        let path = Bundle.main.path(forResource: "FirstData", ofType: "plist")
+        let textDic: Dictionary<String, String> = NSDictionary(contentsOfFile: path!) as! Dictionary<String, String>
+        
         for i in 1...10 {
             var dict: [String : String] = [:]
             
@@ -29,16 +30,24 @@ class FirstViewController: UITableViewController {
             dict[ContentStr] = ""
             dict[TitleStr] = "2016-12-21 12:21"
             
-            _datArray?.append(dict)
+            if i-1 < textDic.count {
+                dict[TitleStr] = Array(textDic.keys)[i-1]
+                dict[ContentStr] = Array(textDic.values)[i-1]
+            }
+            dataArray?.append(dict)
         }
         
         tableView.reloadData()
     }
-    
+    override func setUpView() {
+        super.setUpView()
+        //注册cell
+        self.tableView.register(UINib.init(nibName: _cellId, bundle: Bundle.main), forCellReuseIdentifier: _cellId)
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FirstCell = tableView.dequeueReusableCell(withIdentifier: _cellId) as! FirstCell
         
-        cell.fillData(_datArray![indexPath.row])
+        cell.fillData(dataArray![indexPath.row])
         return cell;
     }
     
@@ -47,7 +56,7 @@ class FirstViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let aArray = _datArray {
+        if let aArray = dataArray {
             return aArray.count
         }else {
             return 0

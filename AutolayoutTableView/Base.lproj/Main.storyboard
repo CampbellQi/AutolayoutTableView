@@ -30,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="-241" y="-138"/>
         </scene>
-        <!--Root View Controller-->
+        <!--相同cell显示-->
         <scene sceneID="Zoc-rV-eHm">
             <objects>
                 <tableViewController id="A54-3f-Rvh" customClass="FirstViewController" customModule="AutolayoutTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                             <outlet property="delegate" destination="A54-3f-Rvh" id="CXR-sV-Duo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="nJm-hq-t1s"/>
+                    <navigationItem key="navigationItem" title="相同cell显示" id="nJm-hq-t1s"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6e-nT-Pz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="721" y="-591"/>
         </scene>
-        <!--Root View Controller-->
+        <!--不同cell布局-->
         <scene sceneID="ELn-t9-LuC">
             <objects>
                 <tableViewController id="DF8-mA-9Fc" customClass="SecondViewController" customModule="AutolayoutTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,7 +99,7 @@
                             <outlet property="delegate" destination="DF8-mA-9Fc" id="ZDA-Hg-6jS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="yUv-ey-V3E"/>
+                    <navigationItem key="navigationItem" title="不同cell布局" id="yUv-ey-V3E"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfJ-pv-Qf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +122,7 @@
             </objects>
             <point key="canvasLocation" x="711" y="67"/>
         </scene>
-        <!--Root View Controller-->
+        <!--输入编辑-->
         <scene sceneID="yNa-dw-GGE">
             <objects>
                 <tableViewController id="yqC-9G-Uzl" customClass="ThirdViewController" customModule="AutolayoutTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,13 +145,13 @@
                             <outlet property="delegate" destination="yqC-9G-Uzl" id="Z3N-EF-YgY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Prd-xk-MA5"/>
+                    <navigationItem key="navigationItem" title="输入编辑" id="Prd-xk-MA5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUA-Yw-zK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1674" y="738"/>
         </scene>
-        <!--Root View Controller-->
+        <!--scrollview滚动-->
         <scene sceneID="NhX-HF-Oaj">
             <objects>
                 <tableViewController id="4Lk-60-7QM" customClass="FourthViewController" customModule="AutolayoutTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -174,7 +174,7 @@
                             <outlet property="delegate" destination="4Lk-60-7QM" id="Alb-oy-d7j"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="uIn-Fb-Wfi"/>
+                    <navigationItem key="navigationItem" title="scrollview滚动" id="uIn-Fb-Wfi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NfS-CR-751" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
