@@ -1,7 +1,7 @@
 //
 //  FourthViewController.swift
 //  AutolayoutTableView
-//
+//  //注意：要将导航栏设置为不透明并且scrollview里面的外层view向下拉升49像素至tabbar底部
 //  Created by 冯万琦 on 2017/1/20.
 //  Copyright © 2017年 yidian. All rights reserved.
 //
