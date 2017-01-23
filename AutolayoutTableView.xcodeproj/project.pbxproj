@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182F737B1E35E1FD0087EB59 /* MenuAddCompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F73791E35E1FD0087EB59 /* MenuAddCompleteCell.swift */; };
+		182F737C1E35E1FD0087EB59 /* MenuAddCompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182F737A1E35E1FD0087EB59 /* MenuAddCompleteCell.xib */; };
 		188D30D21E31B127006F37F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D30D11E31B127006F37F6 /* AppDelegate.swift */; };
 		188D30D41E31B127006F37F6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D30D31E31B127006F37F6 /* FirstViewController.swift */; };
 		188D30D61E31B127006F37F6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D30D51E31B127006F37F6 /* SecondViewController.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182F73791E35E1FD0087EB59 /* MenuAddCompleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuAddCompleteCell.swift; sourceTree = "<group>"; };
+		182F737A1E35E1FD0087EB59 /* MenuAddCompleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuAddCompleteCell.xib; sourceTree = "<group>"; };
 		188D30CE1E31B127006F37F6 /* AutolayoutTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188D30D11E31B127006F37F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188D30D31E31B127006F37F6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				18BE071A1E345B17001316A5 /* MenuAddTextCell.xib */,
 				18BE07211E34948E001316A5 /* MenuAddContextCell.swift */,
 				18BE07221E34948E001316A5 /* MenuAddContextCell.xib */,
+				182F73791E35E1FD0087EB59 /* MenuAddCompleteCell.swift */,
+				182F737A1E35E1FD0087EB59 /* MenuAddCompleteCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 				188D31001E31B5D8006F37F6 /* 6.jpg in Resources */,
 				188D30DE1E31B127006F37F6 /* LaunchScreen.storyboard in Resources */,
 				188D30FF1E31B5D8006F37F6 /* 5.jpg in Resources */,
+				182F737C1E35E1FD0087EB59 /* MenuAddCompleteCell.xib in Resources */,
 				188D30DB1E31B127006F37F6 /* Assets.xcassets in Resources */,
 				188D31021E31B5D8006F37F6 /* 8.jpg in Resources */,
 				188D30FC1E31B5D8006F37F6 /* 2.jpg in Resources */,
@@ -289,6 +296,7 @@
 				18BE07161E3457AD001316A5 /* BaseCell.swift in Sources */,
 				18BE071D1E345B17001316A5 /* MenuAddTextCell.swift in Sources */,
 				188D30ED1E31B2A4006F37F6 /* FirstCell.swift in Sources */,
+				182F737B1E35E1FD0087EB59 /* MenuAddCompleteCell.swift in Sources */,
 				188D30E71E31B263006F37F6 /* ThirdViewController.swift in Sources */,
 				18BE07231E34948E001316A5 /* MenuAddContextCell.swift in Sources */,
 				188D30D41E31B127006F37F6 /* FirstViewController.swift in Sources */,

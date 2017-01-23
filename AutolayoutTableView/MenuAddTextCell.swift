@@ -11,7 +11,6 @@ import UIKit
 let TitleText = "nameText"
 let ContentText = "contentText"
 
-typealias TextChangedBlock = (_ text: String) -> Void
 
 class MenuAddTextCell: BaseCell, UITextFieldDelegate {
     
@@ -22,7 +21,10 @@ class MenuAddTextCell: BaseCell, UITextFieldDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //通过xib设置的delegate不起作用
+        contentTF.delegate = self
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

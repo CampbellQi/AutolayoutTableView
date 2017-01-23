@@ -8,10 +8,12 @@
 
 import UIKit
 
-class MenuAddContextCell: BaseCell {
+class MenuAddContextCell: BaseCell, UITextViewDelegate {
 
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descTV: UITextView!
+    
+    var textChangedBlock: ((_ text: String) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +21,8 @@ class MenuAddContextCell: BaseCell {
         self.descTV.layer.borderColor = UIColor.lightGray.cgColor
         self.descTV.layer.borderWidth = 1.0
         self.descTV.layer.cornerRadius = 8.0
+        
+        descTV.delegate = self
     }
     
 
@@ -26,6 +30,18 @@ class MenuAddContextCell: BaseCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if let block = textChangedBlock {
+            block(textView.text!)
+        }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        if let block = textChangedBlock {
+            block(textView.text!)
+        }
     }
     
     override func fillData(_ data: Any?) {

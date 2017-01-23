@@ -8,10 +8,14 @@
 
 import UIKit
 
-enum CellType: Int {
-    case Image = 1, Name = 2, Price = 3, Desc
-}
-class ThirdViewController: BaseTableViewController {
+
+
+class ThirdViewController: BaseTableViewController, UITextFieldDelegate {
+    enum CellType: Int {
+        case Image = 1, Name, Price, Desc, Complete
+    }
+    typealias TextChangedBlock = (_ text: String) -> Void
+    
     //内容存储区
     var dataDict: Dictionary<CellType, Any?> = [CellType.Image: nil, CellType.Name: "", CellType.Price: "", CellType.Desc: ""]
     
@@ -36,7 +40,7 @@ class ThirdViewController: BaseTableViewController {
     }
     
     override func setUpData() {
-        dataArray = [CellType.Image, CellType.Name, CellType.Price, CellType.Desc]
+        dataArray = [CellType.Image, CellType.Name, CellType.Price, CellType.Desc, CellType.Complete]
     }
     
     //获取cell名称
@@ -46,6 +50,8 @@ class ThirdViewController: BaseTableViewController {
             return "MenuAddImageCell"
         case .Desc:
             return "MenuAddContextCell"
+        case .Complete:
+            return "MenuAddCompleteCell"
         default:
             return "MenuAddTextCell"
         }
@@ -63,6 +69,8 @@ class ThirdViewController: BaseTableViewController {
             return [TitleText: "价格", ContentText: newDatadict[CellType.Price]  as? String]
         case .Desc:
             return [TitleText: "描述", ContentText: newDatadict[CellType.Desc]  as? String]
+        default:
+            return nil
         }
     }
     
@@ -104,16 +112,33 @@ class ThirdViewController: BaseTableViewController {
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.fillData(data)
         
-        if type == CellType.Name {
+        if type == CellType.Name || type == CellType.Price {
             let textCell: MenuAddTextCell = cell as! MenuAddTextCell
+//            textCell.contentTF.delegate = self;
             textCell.textChangedBlock = {(text: String) -> Void in
                 self.fillCellDataByType(type: type, data: text)
+            }
+        }
+        
+        if type == CellType.Desc {
+            let descCell: MenuAddContextCell = cell as! MenuAddContextCell
+            descCell.textChangedBlock = {(text: String) -> Void in
+                self.fillCellDataByType(type: type, data: text)
+            }
+        }
+        
+        if type == CellType.Complete {
+            let completeCell: MenuAddCompleteCell = cell as! MenuAddCompleteCell
+            completeCell.completeBlock = {(Void) -> Void in
+                print(self.dataDict)
             }
         }
         return cell
     }
     
-    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        
+    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
